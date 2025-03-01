@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- =============== FAVICON =============== -->
+    <link rel="shortcut icon" href="site-assets/favicon/favicon.ico?" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="site-assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="site-assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="site-assets/favicon/favicon-16x16.png" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="site-assets/css/styles.css" />
+
+    <title>Galih Portfolio</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="profile container">
+      <!-- Theme button -->
+      <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+      <div class="profile__container grid">
+        <div class="profile__data">
+          <div class="profile__border">
+            <div class="profile__perfil">
+              <!-- Insert your image, according to the example size of the portfolio -->
+              <img src="site-assets/img/profile.png" alt="" />
+            </div>
+          </div>
+
+          <h2 class="profile__name">Galih Pratama</h2>
+          <h3 class="profile__profession">FrontEnd developer</h3>
+
+          <ul class="profile__social">
+            <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/galihtama/" target="_blank" class="profile__social-link">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a href="https://github.com/galpratma" target="_blank" class="profile__social-link">
+              <i class="ri-github-line"></i>
+            </a>
+          </ul>
+        </div>
+
+        <div class="profile__info grid">
+          <div class="profile__info-group">
+            <h3 class="profile__info-number" id="experience"></h3>
+            <p class="profile__info-description">
+              Years of <br />
+              work
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">4</h3>
+            <p class="profile__info-description">
+              Star <br />
+              projects
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number" id="gh-project"></h3>
+            <p class="profile__info-description">
+              Github <br />
+              projects
+            </p>
+          </div>
+        </div>
+
+        <div class="profile__buttons">
+          <!-- Insert your CV -->
+          <a download="" href="./CV-MISRUDIN.pdf" class="button"> Download CV <i class="ri-download-line"></i> </a>
+
+          <div class="profile__buttons-small">
+            <!-- Insert a real number plus country code -->
+            <a href="https://api.whatsapp.com/send?phone=085848335326&text=Hello, more information!" target="_blank" class="button button__small button__gray">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+            <!-- Insert your brand name or profile -->
+            <a href="mailto: galpratma11@gmail.com" target="_blank" class="button button__small button__gray">
+              <i class="ri-mail-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <section class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content">
+          <button class="filters__button filter-tab-active" data-target="#projects">Projects</button>
+          <button class="filters__button" data-target="#skills">Skills</button>
+        </ul>
+
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div class="projects__content grid filters__active" data-content id="projects">
+            <article class="projects__card">
+              <img src="site-assets/img/3second.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">3Second</h3>
+                  <a href="https://3second.co.id" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="site-assets/img/riseloka-mobile.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">IOS</span>
+                  <h3 class="projects__title">Riseloka IOS</h3>
+                  <a href="https://apps.apple.com/us/app/riseloka/id1574400045" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="site-assets/img/kumkm.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">IOS</span>
+                  <h3 class="projects__title">Data KUMKM</h3>
+                  <a href="https://apps.apple.com/ai/app/data-kumkm/id1601018953" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
+              <img src="site-assets/img/riseloka.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Riseloka</h3>
+                  <a href="https://www.riseloka.com" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="site-assets/img/riseloka-support.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Support Riseloka</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="site-assets/img/riseloka-admin.webp" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Admin Riseloka</h3>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">FrontEnd Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">HTML</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">CSS</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Bootstrap</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Java Script</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Backend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">PHP</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">MySQL</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Version Control</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Git</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Github</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skills__area">
+              <h3 class="skills__title">Tools</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Vs Code</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Xampp</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <span class="footer__copy">
+        Copyright &copy; 2021-
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Misrudin All Rights Reserved
+      </span>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="site-assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="site-assets/js/main.js"></script>
+  </body>
+</html>
