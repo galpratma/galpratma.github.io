@@ -81,15 +81,54 @@ function calculateYear(birthMonth, birthDay, birthYear) {
   return calculatedAge;
 }
 
-const experience = document.getElementById("experience");
-experience.innerHTML = calculateYear(2, 1, 2020).toString() + "+";
+// Username GitHub yang ingin ditampilkan
+const username = "galpratma"; // Ganti dengan username GitHub Anda
 
+// Fungsi untuk menampilkan pengalaman kerja
+const experience = document.getElementById("experience");
+experience.innerHTML = calculateYear(2, 1, 2023).toString() + "+";
+
+// Fungsi untuk mendapatkan jumlah proyek di GitHub
 async function getPublicRepo() {
-  await fetch("https://api.github.com/users/misrudin")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("gh-project").innerHTML = `${data?.public_repos}+`;
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    const userData = await response.json();
+
+    // Update jumlah repository publik
+    document.getElementById("gh-project").innerHTML = `${userData?.public_repos}+`;
+
+    // Hitung jumlah tahun di GitHub
+    if (userData.created_at) {
+      const createdDate = new Date(userData.created_at);
+      const currentDate = new Date();
+      const yearsOnGitHub = Math.floor((currentDate - createdDate) / (365 * 24 * 60 * 60 * 1000));
+
+      // Jika ingin menampilkan tahun pengalaman di GitHub, aktifkan baris berikut:
+      // experience.innerHTML = `${yearsOnGitHub}+`;
+    }
+
+    // Mendapatkan semua repository untuk menghitung bintang
+    const reposResponse = await fetch(`https://api.github.com/users/${username}/repos`);
+    const repos = await reposResponse.json();
+
+    // Menghitung jumlah bintang
+    let totalStars = 0;
+    repos.forEach((repo) => {
+      totalStars += repo.stargazers_count;
     });
+
+    // Update elemen yang menampilkan jumlah bintang
+    const starsElements = document.querySelectorAll(".profile__info-number");
+    if (starsElements.length > 1) {
+      starsElements[1].textContent = totalStars > 0 ? totalStars : "4"; // Gunakan nilai default jika tidak ada bintang
+    }
+  } catch (error) {
+    console.error("Error fetching GitHub data:", error);
+    document.getElementById("gh-project").innerHTML = "0+";
+  }
 }
 
-getPublicRepo().then();
+// Panggil fungsi saat dokumen dimuat
+document.addEventListener("DOMContentLoaded", () => {
+  getPublicRepo();
+});
