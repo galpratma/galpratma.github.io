@@ -417,7 +417,17 @@ body.dark-theme {
   .skills__box {
     column-gap: 1rem;
   }
+  .profile__perfil img {
+    height: 145px;
+  }
 }
+
+@media screen and (min-width: 321px) {
+  .profile__perfil img {
+    height: 145px;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .projects__content {
